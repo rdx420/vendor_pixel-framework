@@ -153,6 +153,14 @@
             android:title="@string/custom_screen_resolution_title"
             settings:controller="com.android.settings.display.CustomScreenResolutionController"/>
 
+        <com.android.settings.display.DcDimmingPreference
+            android:fragment="com.android.settings.display.DcDimmingSettings"
+            android:key="dc_dimming"
+            android:title="@string/dc_dimming_title"
+            android:widgetLayout="@null"
+            settings:widgetLayout="@null"
+            settings:keywords="@string/keywords_display_dc_dimming"/>
+
         <SwitchPreference
             android:key="display_white_balance"
             android:summary="@string/display_white_balance_summary"
@@ -221,26 +229,19 @@
             android:summary="@string/wake_when_plugged_or_unplugged_summary"
             android:defaultValue="true" />
 
-        <com.evolution.settings.preference.SystemSettingSwitchPreference
-            android:key="high_touch_polling_rate_enable"
-            android:title="@string/high_touch_polling_rate_title"
-            android:summary="@string/high_touch_polling_rate_summary"
-            android:defaultValue="false"
-            settings:controller="com.android.settings.touch.HighTouchPollingRateSettingsPreferenceController" />
-
-        <com.evolution.settings.preference.SystemSettingSwitchPreference
-            android:key="high_touch_sensitivity_enable"
-            android:title="@string/high_touch_sensitivity_title"
-            android:summary="@string/high_touch_sensitivity_summary"
-            android:defaultValue="false"
-            settings:controller="com.android.settings.touch.HighTouchSensitivitySettingsPreferenceController" />
-
         <Preference
             android:key="display_cutout_force_fullscreen_settings"
             android:title="@string/display_cutout_force_fullscreen_title"
             android:summary="@string/display_cutout_force_fullscreen_summary"
             android:fragment="com.android.settings.display.DisplayCutoutForceFullscreenSettings"
             settings:controller="com.android.settings.display.DisplayCutoutForceFullscreenPreferenceController" />
+
+        <com.evolution.settings.preference.SystemSettingSwitchPreference
+            android:key="high_touch_polling_rate_enable"
+            android:title="@string/high_touch_polling_rate_title"
+            android:summary="@string/high_touch_polling_rate_summary"
+            android:defaultValue="false"
+            settings:controller="com.android.settings.touch.HighTouchPollingRateSettingsPreferenceController" />
 
         <ListPreference
             android:key="theme"
