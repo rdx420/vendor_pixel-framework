@@ -78,6 +78,13 @@
         settings:controller="com.android.settings.gestures.DoubleTapScreenPreferenceController" />
 
     <Preference
+        android:key="gesture_doze_double_tap_summary"
+        android:title="@string/doze_double_tap_title"
+        android:fragment="com.android.settings.gestures.DoubleTapAmbientSettings"
+        settings:userRestriction="no_ambient_display"
+        settings:controller="com.android.settings.gestures.DoubleTapAmbientPreferenceController" />
+
+    <Preference
         android:key="gesture_pick_up_input_summary"
         android:title="@string/ambient_display_pickup_title"
         android:fragment="com.android.settings.gestures.PickupGestureSettings"
@@ -96,13 +103,6 @@
         android:title="@string/power_menu_setting_name"
         android:fragment="com.android.settings.gestures.PowerMenuSettings"
         settings:controller="com.android.settings.gestures.PowerMenuPreferenceController" />
-
-    <Preference
-        android:key="gesture_doze_double_tap_summary"
-        android:title="@string/double_tap_title"
-        android:fragment="com.android.settings.gestures.DoubleTapAmbientSettings"
-        settings:userRestriction="no_ambient_display"
-        settings:controller="com.android.settings.gestures.DoubleTapAmbientPreferenceController" />
 
     <Preference
         android:key="gesture_swipe_to_screenshot_summary"
@@ -128,7 +128,6 @@
         android:title="@string/touchscreen_gesture_settings_title"
         android:summary="@string/touchscreen_gesture_settings_summary"
         settings:controller="com.android.settings.gestures.TouchGestureSettingsPreferenceController">
-
         <intent
             android:action="android.intent.action.MAIN"
             android:targetPackage="com.android.touch.gestures"

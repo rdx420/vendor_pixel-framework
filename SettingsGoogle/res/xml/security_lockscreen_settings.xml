@@ -98,7 +98,7 @@
             android:title="@string/pulse_on_new_tracks_title"
             android:summary="@string/pulse_on_new_tracks_summary"
             settings:controller="com.android.settings.display.PulseOnNewTracksPreferenceController" />
-
+            
         <Preference
             android:fragment="com.android.settings.gestures.TapScreenGestureSettings"
             android:key="ambient_display_tap"
@@ -129,8 +129,8 @@
 
         <SwitchPreference
             android:key="ambient_display_notification"
-            android:title="@string/doze_enabled_title"
             android:summary="@string/doze_enabled_summary"
+            android:title="@string/doze_enabled_title"
             settings:controller="com.android.settings.display.AmbientDisplayNotificationsPreferenceController" />
 
         <com.evolution.settings.preference.SecureSettingSwitchPreference

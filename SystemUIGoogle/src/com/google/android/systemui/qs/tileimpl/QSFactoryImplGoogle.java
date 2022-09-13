@@ -27,6 +27,7 @@ import com.android.systemui.qs.tiles.AlarmTile;
 import com.android.systemui.qs.tiles.AmbientDisplayTile;
 import com.android.systemui.qs.tiles.AntiFlickerTile;
 import com.android.systemui.qs.tiles.AODTile;
+import com.android.systemui.qs.tiles.AutoBrightnessTile;
 import com.android.systemui.qs.tiles.BatterySaverTile;
 import com.android.systemui.qs.tiles.BluetoothTile;
 import com.android.systemui.qs.tiles.CPUInfoTile;
@@ -50,6 +51,7 @@ import com.android.systemui.qs.tiles.HeadsUpTile;
 import com.android.systemui.qs.tiles.HotspotTile;
 import com.android.systemui.qs.tiles.InternetTile;
 import com.android.systemui.qs.tiles.LiveDisplayTile;
+import com.android.systemui.qs.tiles.LocaleTile;
 import com.android.systemui.qs.tiles.LocationTile;
 import com.android.systemui.qs.tiles.MicrophoneToggleTile;
 import com.android.systemui.qs.tiles.NfcTile;
@@ -157,7 +159,9 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
             Provider<CompassTile> compassTileProvider,
             Provider<SmartPixelsTile> smartPixelsTileProvider,
             Provider<SleepModeTile> sleepModeTileProvider,
-            Provider<DcDimmingTile> dcDimTileProvider) {
+            Provider<DcDimmingTile> dcDimTileProvider,
+            Provider<LocaleTile> localeTileProvider,
+            Provider<AutoBrightnessTile> autoBrightnessTileProvider) {
         super(qsHostLazy,
                 customTileBuilderProvider,
                 wifiTileProvider,
@@ -216,7 +220,9 @@ public class QSFactoryImplGoogle extends QSFactoryImpl {
                 compassTileProvider,
                 smartPixelsTileProvider,
                 sleepModeTileProvider,
-                dcDimTileProvider);
+                dcDimTileProvider,
+                localeTileProvider,
+                autoBrightnessTileProvider);
         mReverseChargingTileProvider = reverseChargingTileProvider;
         mBatterySaverTileGoogleProvider = batterySaverTileGoogleProvider;
     }
